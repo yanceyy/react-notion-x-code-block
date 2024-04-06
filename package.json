@@ -1,0 +1,57 @@
+{
+  "name": "react-notion-x-code-block",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "pnpm format && pnpm lint",
+    "build": "pnpm build:js && pnpm build:type",
+    "build:js": "rollup -c",
+    "build:type": "tsc",
+    "format": "prettier --write .",
+    "lint:format": "prettier --check .",
+    "lint": "eslint src/**/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.24.3",
+    "@babel/preset-env": "^7.24.4",
+    "@babel/preset-react": "^7.24.1",
+    "@babel/preset-typescript": "^7.24.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "notion-types": "^6.16.0",
+    "notion-utils": "^6.16.0",
+    "prettier": "^3.2.5",
+    "react": "^18.2.0",
+    "react-notion-x": "^6.16.0",
+    "rollup": "^4.14.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-node-externals": "^7.1.1",
+    "rollup-plugin-styles": "^4.0.0",
+    "shiki": "^1.2.4",
+    "typescript": "^5.4.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.4"
+  }
+}
