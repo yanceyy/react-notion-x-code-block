@@ -9,3 +9,16 @@
   width: 100%;
   font-size: 85%;
 }
+
+/*
+    There will use attributes variables have already been set in react-notion-x
+ */
+.codeCaption {
+  padding: 6px 0 6px 2px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: var(--fg-color);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--fg-color-3);
+}
