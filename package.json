@@ -8,6 +8,10 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yanceyy/react-notion-x-code-block"
+  },
   "scripts": {
     "prepare": "pnpm format && pnpm lint",
     "build": "pnpm build:js && pnpm build:type",
