@@ -75,3 +75,16 @@ import "./style.css";
   }}
 />;
 ```
+
+## Run the Example
+
+1. Install dependencies `pnpm i`
+2. Build the package by running `pnpm build`.
+3. Navigate to the example package directory with `cd example`.
+4. Start the example application using `pnpm dev`.
+5. Open your web browser and go to [http://localhost:5173](http://localhost:5173) to view the application.
+
+## Development
+
+1. Execute the command `pnpm watch`. This initiates continuous monitoring of file modifications, enabling automatic compilation.
+2. Navigate to the example folder and execute `pnpm dev`. This starts the Vite React project, which automatically refreshes upon any changes made in the main packages.

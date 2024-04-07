@@ -1,0 +1,635 @@
+{
+  "block": {
+    "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d": {
+      "value": {
+        "id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "version": 242,
+        "type": "page",
+        "properties": {
+          "title": [["Code Snippet"]]
+        },
+        "content": [
+          "cfe3e77b-3627-4e53-969f-88f1b8f5e5b6",
+          "00d8b0ce-a628-4786-9f06-740af571b19b",
+          "e15a395c-da7e-4ceb-9620-abd1cba9844a",
+          "21e33102-d54d-4154-acff-7c4e94c0785f",
+          "57019bed-4e18-4950-a9a8-e966fb9c864c",
+          "5f27d995-d073-4fa1-9682-dff187d02058",
+          "6a3d1f3e-cb24-48c6-b7c0-b54279ef0f13",
+          "518dcd09-28a7-4867-8511-4b1cd253b727",
+          "c59ab3d8-537c-4016-9a46-db81c80d20be",
+          "7c827bdf-4270-4ced-9dfb-5000b8c97429",
+          "bf59447f-ebc3-47fc-bdd1-00de7be2d6ce",
+          "09dbd76b-eb22-4547-87cd-57a597966052",
+          "59876ec8-1366-4b07-a677-17d252f18d6b",
+          "fbf76923-e4e1-4b79-91dc-816d333b6b2b",
+          "cc6729e7-1f95-4275-b2a2-cf8d144fc872",
+          "5ca97ff1-6af3-4ecd-a5ef-b7ce7bb3d3b1",
+          "35600b82-5c97-43bf-a0ad-aa5c4044a768",
+          "0a978dcf-3f2d-41b1-96de-d7feae86c4b3",
+          "4ca141c6-b79c-4074-94a2-3b1bb58115a7",
+          "9879c81b-ea4d-41d0-a866-8651df01de34",
+          "cae4857e-160b-4092-af2e-e08f9c9f59c1",
+          "b064598b-e808-42bc-8657-ad1df550945a",
+          "86952e2e-5972-4fe9-ba8b-e92f9f7ce06b",
+          "1bf3ad4e-73c5-4032-95be-e5d09c279f7f",
+          "e632c164-3147-40b4-8d02-f52eee78b333"
+        ],
+        "format": {
+          "page_icon": "🕐",
+          "page_cover": "/images/page-cover/nasa_the_blue_marble.jpg",
+          "page_cover_position": 0.5
+        },
+        "permissions": [
+          {
+            "role": "editor",
+            "type": "space_permission"
+          },
+          {
+            "role": "reader",
+            "type": "public_permission",
+            "added_timestamp": 1704842567990,
+            "allow_duplicate": false
+          }
+        ],
+        "created_time": 1704842537010,
+        "last_edited_time": 1712449201962,
+        "parent_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf",
+        "parent_table": "space",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "cfe3e77b-3627-4e53-969f-88f1b8f5e5b6": {
+      "value": {
+        "id": "cfe3e77b-3627-4e53-969f-88f1b8f5e5b6",
+        "version": 33,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Python"]]
+        },
+        "created_time": 1704843116656,
+        "last_edited_time": 1712448967700,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "00d8b0ce-a628-4786-9f06-740af571b19b": {
+      "value": {
+        "id": "00d8b0ce-a628-4786-9f06-740af571b19b",
+        "version": 24,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b\n\nprint(list(fibonacci(10)))"
+            ]
+          ],
+          "language": [["Python"]]
+        },
+        "created_time": 1712448967988,
+        "last_edited_time": 1712449104958,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "e15a395c-da7e-4ceb-9620-abd1cba9844a": {
+      "value": {
+        "id": "e15a395c-da7e-4ceb-9620-abd1cba9844a",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712448956382,
+        "last_edited_time": 1712448956382,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "21e33102-d54d-4154-acff-7c4e94c0785f": {
+      "value": {
+        "id": "21e33102-d54d-4154-acff-7c4e94c0785f",
+        "version": 43,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Javascript"]]
+        },
+        "created_time": 1704843116657,
+        "last_edited_time": 1712448962775,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "57019bed-4e18-4950-a9a8-e966fb9c864c": {
+      "value": {
+        "id": "57019bed-4e18-4950-a9a8-e966fb9c864c",
+        "version": 612,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "function fibonacci(n) {\n    const sequence = [0, 1];\n    for (let i = 2; i < n; i++) {\n        sequence.push(sequence[i - 1] + sequence[i - 2]);\n    }\n    return sequence;\n}\n\nconsole.log(fibonacci(10));"
+            ]
+          ],
+          "caption": [["This is a code caption"]],
+          "language": [["JavaScript"]]
+        },
+        "format": {
+          "code_wrap": true
+        },
+        "created_time": 1704843116657,
+        "last_edited_time": 1712449117227,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "5f27d995-d073-4fa1-9682-dff187d02058": {
+      "value": {
+        "id": "5f27d995-d073-4fa1-9682-dff187d02058",
+        "version": 22,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Java"]]
+        },
+        "created_time": 1712449129776,
+        "last_edited_time": 1712449132076,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "6a3d1f3e-cb24-48c6-b7c0-b54279ef0f13": {
+      "value": {
+        "id": "6a3d1f3e-cb24-48c6-b7c0-b54279ef0f13",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "public class Fibonacci {\n    public static void main(String[] args) {\n        int n = 10, firstTerm = 0, secondTerm = 1;\n        for (int i = 0; i < n; i++) {\n            System.out.print(firstTerm + \", \");\n            int nextTerm = firstTerm + secondTerm;\n            firstTerm = secondTerm;\n            secondTerm = nextTerm;\n        }\n    }\n}"
+            ]
+          ],
+          "language": [["Java"]]
+        },
+        "created_time": 1704864013720,
+        "last_edited_time": 1712449127438,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "518dcd09-28a7-4867-8511-4b1cd253b727": {
+      "value": {
+        "id": "518dcd09-28a7-4867-8511-4b1cd253b727",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712449136272,
+        "last_edited_time": 1712449136272,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "c59ab3d8-537c-4016-9a46-db81c80d20be": {
+      "value": {
+        "id": "c59ab3d8-537c-4016-9a46-db81c80d20be",
+        "version": 18,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["C#"]]
+        },
+        "created_time": 1712449136401,
+        "last_edited_time": 1712449147882,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "7c827bdf-4270-4ced-9dfb-5000b8c97429": {
+      "value": {
+        "id": "7c827bdf-4270-4ced-9dfb-5000b8c97429",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "using System;\n\nclass Fibonacci {\n    static void Main() {\n        int n = 10, a = 0, b = 1;\n        for (int i = 0; i < n; i++) {\n            Console.Write($\"{a}, \");\n            int temp = a;\n            a = b;\n            b = temp + b;\n        }\n    }\n}"
+            ]
+          ],
+          "language": [["C#"]]
+        },
+        "created_time": 1712449135967,
+        "last_edited_time": 1712449165531,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "bf59447f-ebc3-47fc-bdd1-00de7be2d6ce": {
+      "value": {
+        "id": "bf59447f-ebc3-47fc-bdd1-00de7be2d6ce",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712449155094,
+        "last_edited_time": 1712449155094,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "09dbd76b-eb22-4547-87cd-57a597966052": {
+      "value": {
+        "id": "09dbd76b-eb22-4547-87cd-57a597966052",
+        "version": 22,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Ruby"]]
+        },
+        "created_time": 1712449154627,
+        "last_edited_time": 1712449157622,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "59876ec8-1366-4b07-a677-17d252f18d6b": {
+      "value": {
+        "id": "59876ec8-1366-4b07-a677-17d252f18d6b",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "def fibonacci(n)\n    a, b = 0, 1\n    n.times do\n        yield a\n        a, b = b, a + b\n    end\nend\n\nfibonacci(10) { |val| print \"#{val}, \" }"
+            ]
+          ],
+          "language": [["Ruby"]]
+        },
+        "created_time": 1712449158076,
+        "last_edited_time": 1712449163081,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "fbf76923-e4e1-4b79-91dc-816d333b6b2b": {
+      "value": {
+        "id": "fbf76923-e4e1-4b79-91dc-816d333b6b2b",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712449172222,
+        "last_edited_time": 1712449172222,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "cc6729e7-1f95-4275-b2a2-cf8d144fc872": {
+      "value": {
+        "id": "cc6729e7-1f95-4275-b2a2-cf8d144fc872",
+        "version": 17,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Go"]]
+        },
+        "created_time": 1712449171836,
+        "last_edited_time": 1712449174061,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "5ca97ff1-6af3-4ecd-a5ef-b7ce7bb3d3b1": {
+      "value": {
+        "id": "5ca97ff1-6af3-4ecd-a5ef-b7ce7bb3d3b1",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "package main\n\nimport \"fmt\"\n\nfunc main() {\n    a, b := 0, 1\n    for i := 0; i < 10; i++ {\n        fmt.Println(a)\n        a, b = b, a+b\n    }\n}"
+            ]
+          ],
+          "language": [["Go"]]
+        },
+        "created_time": 1712449174391,
+        "last_edited_time": 1712449180181,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "35600b82-5c97-43bf-a0ad-aa5c4044a768": {
+      "value": {
+        "id": "35600b82-5c97-43bf-a0ad-aa5c4044a768",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712449190916,
+        "last_edited_time": 1712449190916,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "0a978dcf-3f2d-41b1-96de-d7feae86c4b3": {
+      "value": {
+        "id": "0a978dcf-3f2d-41b1-96de-d7feae86c4b3",
+        "version": 58,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Swift\n"]]
+        },
+        "created_time": 1712449179044,
+        "last_edited_time": 1712449198179,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "4ca141c6-b79c-4074-94a2-3b1bb58115a7": {
+      "value": {
+        "id": "4ca141c6-b79c-4074-94a2-3b1bb58115a7",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "func fibonacci(_ n: Int) -> [Int] {\n    var sequence = [0, 1]\n    while sequence.count < n {\n        sequence.append(sequence[sequence.count - 1] + sequence[sequence.count - 2])\n    }\n    return sequence\n}\n\nprint(fibonacci(10))"
+            ]
+          ],
+          "language": [["Swift"]]
+        },
+        "created_time": 1712449198402,
+        "last_edited_time": 1712449204819,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "9879c81b-ea4d-41d0-a866-8651df01de34": {
+      "value": {
+        "id": "9879c81b-ea4d-41d0-a866-8651df01de34",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712449210039,
+        "last_edited_time": 1712449210039,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "cae4857e-160b-4092-af2e-e08f9c9f59c1": {
+      "value": {
+        "id": "cae4857e-160b-4092-af2e-e08f9c9f59c1",
+        "version": 20,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["PHP"]]
+        },
+        "created_time": 1712449209720,
+        "last_edited_time": 1712449212246,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "b064598b-e808-42bc-8657-ad1df550945a": {
+      "value": {
+        "id": "b064598b-e808-42bc-8657-ad1df550945a",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "function fibonacci($n) {\n    $a = 0; $b = 1; \n    for ($i = 0; $i < $n; $i++) {\n        echo $a . \", \";\n        $next = $a + $b;\n        $a = $b;\n        $b = $next;\n    }\n}\n\nfibonacci(10);"
+            ]
+          ],
+          "language": [["PHP"]]
+        },
+        "created_time": 1712449212593,
+        "last_edited_time": 1712449217997,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "86952e2e-5972-4fe9-ba8b-e92f9f7ce06b": {
+      "value": {
+        "id": "86952e2e-5972-4fe9-ba8b-e92f9f7ce06b",
+        "version": 3,
+        "type": "text",
+        "created_time": 1712449219005,
+        "last_edited_time": 1712449219005,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "1bf3ad4e-73c5-4032-95be-e5d09c279f7f": {
+      "value": {
+        "id": "1bf3ad4e-73c5-4032-95be-e5d09c279f7f",
+        "version": 22,
+        "type": "sub_sub_header",
+        "properties": {
+          "title": [["Rust"]]
+        },
+        "created_time": 1712449218632,
+        "last_edited_time": 1712449225240,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    },
+    "e632c164-3147-40b4-8d02-f52eee78b333": {
+      "value": {
+        "id": "e632c164-3147-40b4-8d02-f52eee78b333",
+        "version": 21,
+        "type": "code",
+        "properties": {
+          "title": [
+            [
+              "fn fibonacci(n: u32) {\n    let (mut a, mut b) = (0, 1);\n    for _ in 0..n {\n        println!(\"{}\", a);\n        let next = a + b;\n        a = b;\n        b = next;\n    }\n}\n\nfn main() {\n    fibonacci(10);\n}"
+            ]
+          ],
+          "language": [["Rust"]]
+        },
+        "created_time": 1712449225568,
+        "last_edited_time": 1712449231795,
+        "parent_id": "ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d",
+        "parent_table": "block",
+        "alive": true,
+        "created_by_table": "notion_user",
+        "created_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "last_edited_by_table": "notion_user",
+        "last_edited_by_id": "72f0d253-3ba6-48b5-8a2c-c66b08a20326",
+        "space_id": "3f542fdc-ce07-4179-bf6e-7b7f20f9a6cf"
+      },
+      "role": "reader"
+    }
+  },
+  "space": {},
+  "collection": {},
+  "collection_view": {},
+  "notion_user": {},
+  "collection_query": {},
+  "signed_urls": {},
+  "preview_images": {
+    "https://www.notion.so/image/https%3A%2F%2Fwww.notion.so%2Fimages%2Fpage-cover%2Fnasa_the_blue_marble.jpg?table=block&id=ec6b6e08-7ab5-4b08-b9a6-606eb5e1a02d&cache=v2": {
+      "originalWidth": 2000,
+      "originalHeight": 1500,
+      "dataURIBase64": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAQCdASoQAAwABUB8JZwAAiD36DbIAAD+8zT01YBfVhL+kOukalDzyUW6EOmun0wXeU2i0S0T1soX1fZxjuerX3sEhiL/XryQAAAA"
+    }
+  }
+}
