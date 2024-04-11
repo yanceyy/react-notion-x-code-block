@@ -10,6 +10,7 @@
   font-size: 85%;
   margin: 2px;
   position: relative;
+  --appear-animation: opacity 0.1s linear;
 }
 
 /*
@@ -48,5 +49,24 @@
 }
 
 .codeBlock:hover .codeCopyButton {
+  opacity: 1;
+}
+
+.codeLanLabel {
+  position: absolute;
+  display: inline-block;
+  left: 10px;
+  top: 15px;
+  text-align: center;
+  padding: 0 12px;
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+
+.codeBlock:hover .codeLanLabel {
   opacity: 1;
 }

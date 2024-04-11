@@ -13,6 +13,7 @@ export const Code: React.FC<{
   defaultLanguage?: string;
   className?: string;
   showCopy?: boolean;
+  showLangLabel?: boolean;
   themes?: {
     light: BundledTheme;
     dark: BundledTheme;
@@ -25,29 +26,32 @@ export const Code: React.FC<{
     light: "catppuccin-latte",
     dark: "dracula"
   },
-  showCopy = true
+  showCopy = true,
+  showLangLabel = true
 }) => {
   const { recordMap } = useNotionContext();
-  const [isCopied, setIsCopied] = useState(false);
+
   const content = getBlockTitle(block, recordMap);
   const [code, setCode] = useState<string | undefined>(undefined);
+  const [isCopied, setIsCopied] = useState(false);
+
   const timer = useRef<null | number>(null);
 
-  const language = (
-    block.properties?.language?.[0]?.[0] || defaultLanguage
-  ).toLowerCase();
   const caption = block.properties.caption;
+
+  const providedLangType = block.properties?.language?.[0]?.[0];
+  const lang = (providedLangType || defaultLanguage).toLowerCase();
 
   useEffect(() => {
     async function renderCodeToHtml() {
       const htmlCode = await codeToHtml(content, {
-        lang: language,
+        lang,
         themes
       });
       setCode(htmlCode);
     }
     content && renderCodeToHtml();
-  }, [content, language, themes]);
+  }, [content, lang, themes]);
 
   const clickCopy = useCallback(() => {
     navigator.clipboard.writeText(content).then(() => {
@@ -65,11 +69,11 @@ export const Code: React.FC<{
 
   return (
     <figure className={cs(styles.codeBlock, className)}>
+      {showLangLabel && providedLangType ? (
+        <span className={styles.codeLanLabel}>{providedLangType}</span>
+      ) : null}
       {showCopy ? (
-        <button
-          onClick={clickCopy}
-          className={styles.codeCopyButton}
-        >
+        <button onClick={clickCopy} className={styles.codeCopyButton}>
           <IoMdCopy />
           {isCopied ? "Copied" : "Copy"}
         </button>

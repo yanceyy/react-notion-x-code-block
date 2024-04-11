@@ -77,13 +77,14 @@ import "./style.css";
 ```
 
 ## API
-| Property        | Description                                              | Type      | Default                                     |
-|-----------------|----------------------------------------------------------|-----------|---------------------------------------------|
-| block           | Receives render code content from `NotionRenderer`       | CodeBlock | -                                           |
-| className       | Additional class for Code                                | string    | -                                           |
-| defaultLanguage | Default programming language if not specified in `block` | string    | typescript                                  |
+
+| Property        | Description                                              | Type      | Default                                      |
+| --------------- | -------------------------------------------------------- | --------- | -------------------------------------------- |
+| block           | Receives render code content from `NotionRenderer`       | CodeBlock | -                                            |
+| className       | Additional class for Code                                | string    | -                                            |
+| defaultLanguage | Default programming language if not specified in `block` | string    | typescript                                   |
 | themes          | Themes for rendering code                                | object    | {light: "catppuccin-latte", dark: "dracula"} |
-| showCopy        | Whether to show the copy button                          | boolean   | true                                        |
+| showCopy        | Whether to show the copy button                          | boolean   | true                                         |
 
 ## Run the Example
 
