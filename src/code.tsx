@@ -78,7 +78,7 @@ export const Code: React.FC<{
           {isCopied ? "Copied" : "Copy"}
         </button>
       ) : null}
-      {code == undefined ? (
+      {!code ? (
         <pre>{content}</pre>
       ) : (
         <div dangerouslySetInnerHTML={{ __html: code }} />

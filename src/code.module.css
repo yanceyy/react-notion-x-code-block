@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
-  padding: 5px;
+  padding: 3px 6px;
   border: none;
   cursor: pointer;
   background-color: var(--bg-color);
