@@ -1,11 +1,16 @@
 type HandlerFunction = (element: Element) => void;
 
 class ObserverManager {
-  private observer: IntersectionObserver;
+  private observer?: IntersectionObserver;
   private handlers: Map<Element, HandlerFunction>;
 
   constructor() {
     this.handlers = new Map();
+
+    // Skip when SSR
+    if (typeof window === "undefined") {
+      return;
+    }
 
     this.observer = new IntersectionObserver(
       (entries) => {
@@ -26,14 +31,14 @@ class ObserverManager {
   // Return unobserve callback directly
   observe(element: Element, handler: HandlerFunction): () => void {
     this.handlers.set(element, handler);
-    this.observer.observe(element);
+    this.observer?.observe(element);
 
     return () => this.unobserve(element);
   }
 
   unobserve(element: Element): void {
     this.handlers.delete(element);
-    this.observer.unobserve(element);
+    this.observer?.unobserve(element);
   }
 }
 
