@@ -3,6 +3,7 @@ import { IoMdCopy } from "react-icons/io";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { cs, useNotionContext, Text } from "react-notion-x";
 import { codeToHtml } from "shiki";
+import { observerManager } from "./manager";
 import styles from "./code.module.css";
 
 import type { CodeBlock } from "notion-types";
@@ -14,6 +15,7 @@ export const Code: React.FC<{
   className?: string;
   showCopy?: boolean;
   showLangLabel?: boolean;
+  lazyRendering?: boolean;
   themes?: {
     light: BundledTheme;
     dark: BundledTheme;
@@ -27,31 +29,50 @@ export const Code: React.FC<{
     dark: "dracula"
   },
   showCopy = true,
-  showLangLabel = true
+  showLangLabel = true,
+  lazyRendering = true
 }) => {
   const { recordMap } = useNotionContext();
-
   const content = getBlockTitle(block, recordMap);
   const [code, setCode] = useState<string | undefined>(undefined);
   const [isCopied, setIsCopied] = useState(false);
-
   const timer = useRef<null | number>(null);
+  const codeRef = useRef<HTMLDivElement | null>(null);
 
-  const caption = block.properties.caption;
+  const renderCodeToHtml = useCallback(async () => {
+    const htmlCode = await codeToHtml(content, {
+      lang: (
+        block.properties?.language?.[0]?.[0] || defaultLanguage
+      ).toLowerCase(),
+      themes
+    });
 
-  const providedLangType = block.properties?.language?.[0]?.[0];
-  const lang = (providedLangType || defaultLanguage).toLowerCase();
+    setCode(htmlCode);
+
+    if (codeRef.current) {
+      observerManager.unobserve(codeRef.current);
+    }
+  }, [content, block.properties?.language, defaultLanguage, themes]);
 
   useEffect(() => {
-    async function renderCodeToHtml() {
-      const htmlCode = await codeToHtml(content, {
-        lang,
-        themes
-      });
-      setCode(htmlCode);
+    // if code is not null (means the highlighted codes has been rendered), we don't want to observe it again
+    if (code) return;
+
+    const element = codeRef.current;
+    let unobservedElement = null;
+
+    if (lazyRendering) {
+      if (element) {
+        unobservedElement = observerManager.observe(element, renderCodeToHtml);
+      }
+    } else {
+      renderCodeToHtml();
     }
-    content && renderCodeToHtml();
-  }, [content, lang, themes]);
+
+    return () => {
+      unobservedElement?.();
+    };
+  }, [renderCodeToHtml, lazyRendering, code]);
 
   const clickCopy = useCallback(() => {
     navigator.clipboard.writeText(content).then(() => {
@@ -68,9 +89,11 @@ export const Code: React.FC<{
   }, [content]);
 
   return (
-    <figure className={cs(styles.codeBlock, className)}>
-      {showLangLabel && providedLangType ? (
-        <span className={styles.codeLanLabel}>{providedLangType}</span>
+    <figure ref={codeRef} className={cs(styles.codeBlock, className)}>
+      {showLangLabel && block.properties?.language ? (
+        <span className={styles.codeLanLabel}>
+          {block.properties.language[0][0]}
+        </span>
       ) : null}
       {showCopy ? (
         <button onClick={clickCopy} className={styles.codeCopyButton}>
@@ -83,9 +106,9 @@ export const Code: React.FC<{
       ) : (
         <div dangerouslySetInnerHTML={{ __html: code }} />
       )}
-      {caption && (
+      {block.properties.caption && (
         <figcaption className={styles.codeCaption}>
-          <Text value={caption} block={block} />
+          <Text value={block.properties.caption} block={block} />
         </figcaption>
       )}
     </figure>

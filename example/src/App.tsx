@@ -35,21 +35,21 @@ function App() {
 
   return (
     <div className="flex items-center flex-col dark:bg-gray-600 dark:text-gray-200">
-      <div
-        className="p-5 w-[720px]"
-      >
-        <button className="font-sans font-bold text-center uppercase transition-all
+      <div className="p-5 w-[720px]">
+        <button
+          className="font-sans font-bold text-center uppercase transition-all
           text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10
           hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none
-          active:opacity-[0.85] active:shadow-none my-3" onClick={clickToggle}>
+          active:opacity-[0.85] active:shadow-none my-3"
+          onClick={clickToggle}
+        >
           Toggle dark mode
         </button>
         <section>
           <h2 className="text-xl font-bold">Default Themes</h2>
           <p className="my-4">
-            By default, code blocks are rendered using the catppuccin-latte theme for light mode and the dracula theme
-            for
-            dark mode.
+            By default, code blocks are rendered using the catppuccin-latte
+            theme for light mode and the dracula theme for dark mode.
           </p>
           <NotionRenderer
             recordMap={recordMap}
@@ -63,16 +63,16 @@ function App() {
         <section>
           <h2 className="text-xl font-bold">Specific Themes</h2>
           <p className="my-4">
-            Wrapper Code Block: Utilize a higher-order component to set specific themes within the block. For light
-            mode,
-            use material-theme-lighter; for dark mode, use material-theme-ocean.
+            Wrapper Code Block: Utilize a higher-order component to set specific
+            themes within the block. For light mode, use material-theme-lighter;
+            for dark mode, use material-theme-ocean.
           </p>
           <NotionRenderer
             recordMap={recordMap}
             fullPage={false}
             darkMode={isDarkMode}
             components={{
-                Code: PersonalizedThemeCode
+              Code: PersonalizedThemeCode
             }}
           />
         </section>

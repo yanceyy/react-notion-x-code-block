@@ -36,15 +36,16 @@ To ensure the code block styles automatically adjust to your theme mode (light o
 ```css
 /* file: style.css */
 @media (prefers-color-scheme: dark) {
-    .shiki,
-    .shiki span {
-        color: var(--shiki-dark) !important;
-        background-color: var(--shiki-dark-bg) !important;
-        /* Optional, if you also want font styles */
-        font-style: var(--shiki-dark-font-style) !important;
-        font-weight: var(--shiki-dark-font-weight) !important;
-        text-decoration: var(--shiki-dark-text-decoration) !important;
-    }
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    /* Optional, if you also want font styles */
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
 ```
 
 Class-based Dark Mode
@@ -78,13 +79,14 @@ import "./style.css";
 
 ## API
 
-| Property        | Description                                              | Type      | Default                                      |
-| --------------- | -------------------------------------------------------- | --------- | -------------------------------------------- |
-| block           | Receives render code content from `NotionRenderer`       | CodeBlock | -                                            |
-| className       | Additional class for Code                                | string    | -                                            |
-| defaultLanguage | Default programming language if not specified in `block` | string    | typescript                                   |
-| themes          | Themes for rendering code                                | object    | {light: "catppuccin-latte", dark: "dracula"} |
-| showCopy        | Whether to show the copy button                          | boolean   | true                                         |
+| Property        | Description                                                                | Type      | Default                                      |
+| --------------- | -------------------------------------------------------------------------- | --------- | -------------------------------------------- |
+| block           | Receives render code content from `NotionRenderer`                         | CodeBlock | -                                            |
+| className       | Additional class for Code                                                  | string    | -                                            |
+| defaultLanguage | Default programming language if not specified in `block`                   | string    | typescript                                   |
+| themes          | Themes for rendering code                                                  | object    | {light: "catppuccin-latte", dark: "dracula"} |
+| showCopy        | Whether to show the copy button                                            | boolean   | true                                         |
+| lazyLoading     | Whether to run highlighting rendering when a code block is within viewport | boolean   | true                                         |
 
 ## Run the Example
 
