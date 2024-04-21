@@ -1,7 +1,8 @@
 {
   "name": "react-notion-x-code-block",
   "version": "0.3.1",
-  "description": "",
+  "description": "Enhance your React-Notion-X projects with a code block component. This component offers out-of-the-box support for multiple programming languages and automatically adapts to light and dark themes",
+  "homepage": "https://react-notion-x-code-block.vercel.app",
   "type": "module",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
