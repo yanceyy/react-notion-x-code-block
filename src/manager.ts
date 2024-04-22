@@ -1,10 +1,23 @@
 type HandlerFunction = (element: Element) => void;
+export type ObserverManagerProps = Pick<
+  IntersectionObserverInit,
+  "rootMargin" | "threshold"
+>;
 
-class ObserverManager {
+export class ObserverManager {
+  private static instances: Map<string, ObserverManager> = new Map();
+
   private observer?: IntersectionObserver;
   private handlers: Map<Element, HandlerFunction>;
 
-  constructor() {
+  static getInstance(options: ObserverManagerProps): ObserverManager {
+    const key = `${options.rootMargin}-${options.threshold}`;
+    if (!ObserverManager.instances.has(key))
+      ObserverManager.instances.set(key, new ObserverManager(options));
+    return ObserverManager.instances.get(key)!;
+  }
+
+  constructor(options: IntersectionObserverInit) {
     this.handlers = new Map();
 
     // Skip when SSR
@@ -12,20 +25,14 @@ class ObserverManager {
       return;
     }
 
-    this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const handler = this.handlers.get(entry.target);
-          if (handler && entry.isIntersecting) {
-            handler(entry.target);
-          }
-        });
-      },
-      {
-        rootMargin: "0px",
-        threshold: 0.1
-      }
-    );
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const handler = this.handlers.get(entry.target);
+        if (handler && entry.isIntersecting) {
+          handler(entry.target);
+        }
+      });
+    }, options);
   }
 
   // Return unobserve callback directly
@@ -41,5 +48,3 @@ class ObserverManager {
     this.observer?.unobserve(element);
   }
 }
-
-export const observerManager = new ObserverManager();

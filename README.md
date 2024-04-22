@@ -1,4 +1,3 @@
-
 Enhance your React-Notion-X projects with a versatile code block component.
 This component offers out-of-the-box support for multiple programming languages and automatically adapts to light and dark themes,
 powered by [Shiki](https://github.com/shikijs/shiki).
@@ -28,7 +27,7 @@ To use the component, import Code from the package and include it in your Notion
 
 ```tsx
 import { Code } from "react-notion-x-code-block";
-import {NotionRenderer} from "react-notion-x";
+import { NotionRenderer } from "react-notion-x";
 
 <NotionRenderer
   // ...
@@ -76,7 +75,7 @@ And then import it to the page:
 
 ```tsx
 import { Code } from "react-notion-x-code-block";
-import {NotionRenderer} from "react-notion-x";
+import { NotionRenderer } from "react-notion-x";
 
 import "./style.css";
 
@@ -89,9 +88,11 @@ import "./style.css";
 ```
 
 ### Personalization settings
-Since `NotionRenderer` will only accept react components as props, we need to wrapper `Code` component and set specific settings. 
+
+Since `NotionRenderer` will only accept react components as props, we need to wrapper `Code` component and set specific settings.
 
 **Specific theme**
+
 ```tsx
 import { type CodeBlock, ExtendedRecordMap } from "notion-types";
 import { Code } from "react-notion-x-code-block";
@@ -116,26 +117,22 @@ import { type CodeBlock, ExtendedRecordMap } from "notion-types";
 import { Code } from "react-notion-x-code-block";
 
 function PersonalizedCode({ block }: { block: CodeBlock }) {
-  return (
-    <Code
-      block={block}
-      showCopy={false}
-    />
-  );
+  return <Code block={block} showCopy={false} />;
 }
 ```
 
 ## API
 
-| Property        | Description                                                                | Type      | Default                                      |
-|-----------------|----------------------------------------------------------------------------| --------- | -------------------------------------------- |
-| block           | Receives render code content from `NotionRenderer`                         | CodeBlock | -                                            |
-| className       | Additional class for Code                                                  | string    | -                                            |
-| defaultLanguage | Default programming language if not specified in `block`                   | string    | typescript                                   |
-| themes          | Themes for rendering code                                                  | object    | {light: "catppuccin-latte", dark: "dracula"} |
-| showCopy        | Whether to show the copy button on the top right corner                    | boolean   | true                                         |
-| showLangLabel   | Whether to show the language type label on the top left corner             | boolean   | true                                         |
-| lazyLoading     | Whether to run highlighting rendering when a code block is within viewport | boolean   | true                                         |
+| Property                    | Description                                                                                                                     | Type      | Default                                      |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------- | -------------------------------------------- |
+| block                       | Receives render code content from `NotionRenderer`                                                                              | CodeBlock | -                                            |
+| className                   | Additional class for Code                                                                                                       | string    | -                                            |
+| defaultLanguage             | Default programming language if not specified in `block`                                                                        | string    | typescript                                   |
+| themes                      | Themes for rendering code                                                                                                       | object    | {light: "catppuccin-latte", dark: "dracula"} |
+| IntersectionObserverOptions | Manage the conditions under which the highlighting of a code block should be triggered (Need `lazyLoading` property to be true) | object    | {rootMargin: "0px",threshold: 0.1}           |
+| showCopy                    | Whether to show the copy button on the top right corner                                                                         | boolean   | true                                         |
+| showLangLabel               | Whether to show the language type label on the top left corner                                                                  | boolean   | true                                         |
+| lazyLoading                 | Whether to run highlighting rendering when a code block is within viewport                                                      | boolean   | true                                         |
 
 ## Run the Example
 

@@ -1,21 +1,29 @@
 import { getBlockTitle } from "notion-utils";
 import { IoMdCopy } from "react-icons/io";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  memo,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState
+} from "react";
 import { cs, useNotionContext, Text } from "react-notion-x";
 import { codeToHtml } from "shiki";
-import { observerManager } from "./manager";
+import { ObserverManager, type ObserverManagerProps } from "./manager";
 import styles from "./code.module.css";
 
 import type { CodeBlock } from "notion-types";
 import type { BundledTheme } from "shiki/themes";
 
-export const Code: React.FC<{
+const _Code: React.FC<{
   block: CodeBlock;
   defaultLanguage?: string;
   className?: string;
   showCopy?: boolean;
   showLangLabel?: boolean;
   lazyRendering?: boolean;
+  IntersectionObserverOptions?: ObserverManagerProps;
   themes?: {
     light: BundledTheme;
     dark: BundledTheme;
@@ -28,6 +36,10 @@ export const Code: React.FC<{
     light: "catppuccin-latte",
     dark: "dracula"
   },
+  IntersectionObserverOptions = {
+    rootMargin: "0px",
+    threshold: 0.1
+  },
   showCopy = true,
   showLangLabel = true,
   lazyRendering = true
@@ -38,6 +50,9 @@ export const Code: React.FC<{
   const [isCopied, setIsCopied] = useState(false);
   const timer = useRef<null | number>(null);
   const codeRef = useRef<HTMLDivElement | null>(null);
+  const observerManager = useMemo(() => {
+    return ObserverManager.getInstance(IntersectionObserverOptions);
+  }, [IntersectionObserverOptions]);
 
   const renderCodeToHtml = useCallback(async () => {
     const htmlCode = await codeToHtml(content, {
@@ -52,7 +67,13 @@ export const Code: React.FC<{
     if (codeRef.current) {
       observerManager.unobserve(codeRef.current);
     }
-  }, [content, block.properties?.language, defaultLanguage, themes]);
+  }, [
+    content,
+    block.properties?.language,
+    defaultLanguage,
+    themes,
+    observerManager
+  ]);
 
   useEffect(() => {
     // if code is not null (means the highlighted codes has been rendered), we don't want to observe it again
@@ -72,7 +93,7 @@ export const Code: React.FC<{
     return () => {
       unobservedElement?.();
     };
-  }, [renderCodeToHtml, lazyRendering, code]);
+  }, [renderCodeToHtml, lazyRendering, code, observerManager]);
 
   const clickCopy = useCallback(() => {
     navigator.clipboard.writeText(content).then(() => {
@@ -114,3 +135,5 @@ export const Code: React.FC<{
     </figure>
   );
 };
+
+export const Code = memo(_Code);
