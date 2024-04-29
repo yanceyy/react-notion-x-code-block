@@ -9,7 +9,6 @@ export class ObserverManager {
 
   private observer?: IntersectionObserver;
   private handlers: Map<Element, HandlerFunction>;
-
   static getInstance(options: ObserverManagerProps): ObserverManager {
     const key = `${options.rootMargin}-${options.threshold}`;
     if (!ObserverManager.instances.has(key))
