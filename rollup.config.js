@@ -3,7 +3,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import babel from "@rollup/plugin-babel";
 import externals from "rollup-plugin-node-externals";
 import del from "rollup-plugin-delete";
-import pkg from "./package.json" assert { type: "json" };
 import styles from "rollup-plugin-styles";
 
 export default [

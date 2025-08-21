@@ -14,7 +14,8 @@ import { ObserverManager, type ObserverManagerProps } from "./manager";
 import styles from "./code.module.css";
 
 import type { CodeBlock } from "notion-types";
-import type { BundledTheme } from "shiki/themes";
+import type { BundledTheme } from "shiki";
+import { langLabelConverter } from "./utils";
 
 const _Code: React.FC<{
   block: CodeBlock;
@@ -55,10 +56,12 @@ const _Code: React.FC<{
   }, [IntersectionObserverOptions]);
 
   const renderCodeToHtml = useCallback(async () => {
+    const lang = langLabelConverter(
+      (block.properties?.language?.[0]?.[0] || defaultLanguage).toLowerCase()
+    );
+
     const htmlCode = await codeToHtml(content, {
-      lang: (
-        block.properties?.language?.[0]?.[0] || defaultLanguage
-      ).toLowerCase(),
+      lang,
       themes
     });
 
